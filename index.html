@@ -1,0 +1,79 @@
+<!-- Integrantes:
+ José Andres López Diaz 1625523 
+ Julio Alejandro Cáceres Fuentes 1549223
+ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reservación de Aulas</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sistema de Reservación de Aulas</h1>
+        <h2>Nombre de la Universidad</h2>
+        <div>
+            <p>Usuario: Estudiante Ejemplo (ID: 12345)</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#aulas">Aulas</a></li>
+                <li><a href="#reservar">Reservar Aula</a></li>
+                <li><a href="#mis-reservas">Mis Reservas</a></li>
+                <li><a href="#administracion">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="inicio">
+            <h3>Dashboard</h3>
+            <p>Aulas disponibles: 15</p>
+            <p>Reservas activas: 3</p>
+        </section>
+
+        <section id="aulas">
+            <h3>Listado de Aulas</h3>
+            <article>
+                <h4>Aula 101</h4>
+                <p>Capacidad: 30 personas | Tipo: Aula teórica | Estado: Disponible</p>
+            </article>
+        </section>
+
+        <section id="reservar">
+            <h3>Reservar Aula</h3>
+            <form action="#" method="post">
+                <label for="aula">Seleccionar Aula:</label>
+                <select id="aula" name="aula">
+                    <option value="101">Aula 101</option>
+                </select>
+                
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha">
+                
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora">
+                
+                <button type="submit">Enviar Reserva</button>
+            </form>
+        </section>
+
+        <section id="mis-reservas">
+            <h3>Mis Reservas</h3>
+            <ul>
+                <li>Aula 101 - 2026-07-20 - 10:00 AM</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Universidad - Sistema de Gestión Académica</p>
+    </footer>
+
+</body>
+</html>
