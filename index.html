@@ -8,16 +8,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Reservación de Aulas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>Sistema de Reservación de Aulas</h1>
-        <h2>Nombre de la Universidad</h2>
-        <div>
-            <p>Usuario: Estudiante Ejemplo (ID: 12345)</p>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="brand">
+                <h1>Sistema de Reservación de Aulas</h1>
+                <h2>Nombre de la Universidad</h2>
+            </div>
+            <div class="user-info">
+                <p><strong>Usuario:</strong> Estudiante Ejemplo <br><span>(ID: 12345)</span></p>
+            </div>
         </div>
-        <nav>
+        <nav class="main-nav">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#aulas">Aulas</a></li>
@@ -28,51 +33,81 @@
         </nav>
     </header>
 
-    <main>
+    <main class="container">
         
-        <section id="inicio">
+        <section id="inicio" class="card dashboard">
             <h3>Dashboard</h3>
-            <p>Aulas disponibles: 15</p>
-            <p>Reservas activas: 3</p>
+            <div class="dashboard-grid">
+                <div class="stat-box available">
+                    <span class="stat-number">15</span>
+                    <p>Aulas disponibles</p>
+                </div>
+                <div class="stat-box active">
+                    <span class="stat-number">3</span>
+                    <p>Reservas activas</p>
+                </div>
+            </div>
         </section>
 
-        <section id="aulas">
+        <section id="aulas" class="card">
             <h3>Listado de Aulas</h3>
-            <article>
-                <h4>Aula 101</h4>
-                <p>Capacidad: 30 personas | Tipo: Aula teórica | Estado: Disponible</p>
-            </article>
+            <div class="aulas-grid">
+                <article class="aula-item disponible">
+                    <h4>Aula 101</h4>
+                    <p><strong>Capacidad:</strong> 30 personas</p>
+                    <p><strong>Tipo:</strong> Aula teórica</p>
+                    <span class="badge status-disponible">Disponible</span>
+                </article>
+                <article class="aula-item ocupada">
+                    <h4>Laboratorio 202</h4>
+                    <p><strong>Capacidad:</strong> 25 personas</p>
+                    <p><strong>Tipo:</strong> Laboratorio de Cómputo</p>
+                    <span class="badge status-ocupada">Ocupada</span>
+                </article>
+            </div>
         </section>
 
-        <section id="reservar">
+        <section id="reservar" class="card">
             <h3>Reservar Aula</h3>
-            <form action="#" method="post">
-                <label for="aula">Seleccionar Aula:</label>
-                <select id="aula" name="aula">
-                    <option value="101">Aula 101</option>
-                </select>
+            <form action="#" method="post" class="booking-form">
+                <div class="form-group">
+                    <label for="aula">Seleccionar Aula:</label>
+                    <select id="aula" name="aula">
+                        <option value="101">Aula 101</option>
+                        <option value="202">Laboratorio 202</option>
+                    </select>
+                </div>
                 
-                <label for="fecha">Fecha:</label>
-                <input type="date" id="fecha" name="fecha">
+                <div class="form-group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
                 
-                <label for="hora">Hora:</label>
-                <input type="time" id="hora" name="hora">
+                <div class="form-group">
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" name="hora">
+                </div>
                 
-                <button type="submit">Enviar Reserva</button>
+                <button type="submit" class="btn-submit">Enviar Reserva</button>
             </form>
         </section>
 
-        <section id="mis-reservas">
+        <section id="mis-reservas" class="card">
             <h3>Mis Reservas</h3>
-            <ul>
-                <li>Aula 101 - 2026-07-20 - 10:00 AM</li>
+            <ul class="reservas-list">
+                <li>
+                    <span class="reserva-aula">Aula 101</span>
+                    <span class="reserva-fecha">Fecha: 2026-07-20</span>
+                    <span class="reserva-hora">Horario: 10:00 AM</span>
+                </li>
             </ul>
         </section>
 
     </main>
 
-    <footer>
+    <footer class="main-footer">
         <p>© 2026 Universidad - Sistema de Gestión Académica</p>
+        <small>Contexto Académico: Mini Proyecto 1 - Administración de Recursos</small>
     </footer>
 
 </body>
