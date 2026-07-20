@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.main-header {
+    background-color: #0d3b66;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.brand h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.brand h2 {
+    font-size: 1.1rem;
+    color: #f4d35e;
+    font-weight: 400;
+}
+
+.user-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.user-info span {
+    color: #cbd5e1;
+}
+
+.main-nav {
+    background-color: #092c4e;
+}
+
+.main-nav ul {
+    max-width: 1100px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: #f4d35e;
+    color: #0d3b66;
+}
+
+.card {
+    background: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    color: #0d3b66;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.dashboard-grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 200px;
+    padding: 1.5rem;
+    border-radius: 6px;
+    text-align: center;
+    color: #fff;
+}
+
+.stat-box.available {
+    background-color: #2a9d8f; 
+}
+
+.stat-box.active {
+    background-color: #e76f51; 
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: block;
+}
+
+.aulas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.aula-item {
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 6px;
+    background-color: #fafbfc;
+    position: relative;
+}
+
+.aula-item h4 {
+    color: #0d3b66;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.aula-item p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-top: 0.5rem;
+}
+
+.status-disponible { background-color: #d1e7dd; color: #0f5132; }
+.status-ocupada { background-color: #f8d7da; color: #842029; }
+
+.booking-form {
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.booking-form select,
+.booking-form input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.booking-form select:focus,
+.booking-form input:focus {
+    border-color: #0d3b66;
+}
+
+.btn-submit {
+    background-color: #0d3b66;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #092c4e;
+}
+
+.reservas-list {
+    list-style: none;
+}
+
+.reservas-list li {
+    background-color: #f8fafc;
+    border-left: 4px solid #f4d35e;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0 6px 6px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.reserva-aula {
+    font-weight: bold;
+    color: #0d3b66;
+}
+
+.main-footer {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+.main-footer small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+    }
+    
+    .main-nav a {
+        text-align: center;
+        padding: 0.75rem;
+    }
+
+    .reservas-list li {
+        flex-direction: column;
+    }
+}
